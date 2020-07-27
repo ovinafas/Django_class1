@@ -1,0 +1,380 @@
+Microsoft Windows [Version 10.0.18362.900]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\Yakub>
+C:\Users\Yakub>
+C:\Users\Yakub>python -V
+Python 3.8.3
+
+C:\Users\Yakub>mkdir shopcenter
+
+C:\Users\Yakub>cd shopcenter
+
+C:\Users\Yakub\shopcenter>python -m venv venv
+
+C:\Users\Yakub\shopcenter>dir
+ Volume in drive C has no label.
+ Volume Serial Number is D666-77E4
+
+ Directory of C:\Users\Yakub\shopcenter
+
+18.06.2020  18:04    <DIR>          .
+18.06.2020  18:04    <DIR>          ..
+18.06.2020  18:04    <DIR>          venv
+               0 File(s)              0 bytes
+               3 Dir(s)  11 221 774 336 bytes free
+
+C:\Users\Yakub\shopcenter>venv\Scripts\activate
+
+(venv) C:\Users\Yakub\shopcenter>pip install Django
+Collecting Django
+  Using cached https://files.pythonhosted.org/packages/5c/63/6d7efecbf3f06db8c6577950a24a191e55cadf7cda4d7fe6976206c886dd/Django-3.0.7-py3-none-any.whl
+Collecting pytz (from Django)
+  Using cached https://files.pythonhosted.org/packages/4f/a4/879454d49688e2fad93e59d7d4efda580b783c745fd2ec2a3adf87b0808d/pytz-2020.1-py2.py3-none-any.whl
+Collecting asgiref~=3.2 (from Django)
+  Downloading https://files.pythonhosted.org/packages/ea/d1/493b29b516d5e829583a610a28465e6b4504a7012d5dbe7236984f9eafc7/asgiref-3.2.9-py3-none-any.whl
+Collecting sqlparse>=0.2.2 (from Django)
+  Using cached https://files.pythonhosted.org/packages/85/ee/6e821932f413a5c4b76be9c5936e313e4fc626b33f16e027866e1d60f588/sqlparse-0.3.1-py2.py3-none-any.whl
+Installing collected packages: pytz, asgiref, sqlparse, Django
+Successfully installed Django-3.0.7 asgiref-3.2.9 pytz-2020.1 sqlparse-0.3.1
+WARNING: You are using pip version 19.2.3, however version 20.1.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(venv) C:\Users\Yakub\shopcenter>python -m pip install --upgrade pip
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/43/84/23ed6a1796480a6f1a2d38f2802901d078266bda38388954d01d3f2e821d/pip-20.1.1-py2.py3-none-any.whl (1.5MB)
+     |████████████████████████████████| 1.5MB 467kB/s
+Installing collected packages: pip
+  Found existing installation: pip 19.2.3
+    Uninstalling pip-19.2.3:
+      Successfully uninstalled pip-19.2.3
+Successfully installed pip-20.1.1
+
+(venv) C:\Users\Yakub\shopcenter>django-admin
+
+Type 'django-admin help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    runserver
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+Note that only Django core commands are listed as settings are not properly configured (error: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.).
+
+(venv) C:\Users\Yakub\shopcenter>django-admin startproject shopping
+
+(venv) C:\Users\Yakub\shopcenter>cd shopping
+
+(venv) C:\Users\Yakub\shopcenter\shopping>python manage.py
+
+Type 'manage.py help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[auth]
+    changepassword
+    createsuperuser
+
+[contenttypes]
+    remove_stale_contenttypes
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+
+[sessions]
+    clearsessions
+
+[staticfiles]
+    collectstatic
+    findstatic
+    runserver
+
+(venv) C:\Users\Yakub\shopcenter\shopping>python manage.py startapp shop
+
+(venv) C:\Users\Yakub\shopcenter\shopping>code .
+
+(venv) C:\Users\Yakub\shopcenter\shopping>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+June 18, 2020 - 18:46:08
+Django version 3.0.7, using settings 'shopping.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[18/Jun/2020 18:46:45] "GET / HTTP/1.1" 200 229
+Not Found: /favicon.ico
+[18/Jun/2020 18:46:47] "GET /favicon.ico HTTP/1.1" 404 2134
+
+(venv) C:\Users\Yakub\shopcenter\shopping>
+(venv) C:\Users\Yakub\shopcenter\shopping>
+(venv) C:\Users\Yakub\shopcenter\shopping>
+(venv) C:\Users\Yakub\shopcenter\shopping>node -v
+v12.13.0
+
+(venv) C:\Users\Yakub\shopcenter\shopping>npm install -g @vue/cli
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated fsevents@1.2.13: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+C:\Users\Yakub\AppData\Roaming\npm\vue -> C:\Users\Yakub\AppData\Roaming\npm\node_modules\@vue\cli\bin\vue.js
+
+> core-js@3.6.5 postinstall C:\Users\Yakub\AppData\Roaming\npm\node_modules\@vue\cli\node_modules\core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon:
+> https://opencollective.com/core-js
+> https://www.patreon.com/zloirock
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+
+> @apollo/protobufjs@1.0.4 postinstall C:\Users\Yakub\AppData\Roaming\npm\node_modules\@vue\cli\node_modules\@apollo\protobufjs
+> node scripts/postinstall
+
+
+> nodemon@1.19.4 postinstall C:\Users\Yakub\AppData\Roaming\npm\node_modules\@vue\cli\node_modules\nodemon
+> node bin/postinstall || exit 0
+
+Love nodemon? You can now support the project via the open collective:
+ > https://opencollective.com/nodemon/donate
+
+
+> ejs@2.7.4 postinstall C:\Users\Yakub\AppData\Roaming\npm\node_modules\@vue\cli\node_modules\ejs
+> node ./postinstall.js
+
+Thank you for installing EJS: built with the Jake JavaScript build tool (https://jakejs.com/)
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules\@vue\cli\node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"ia32"})
+npm WARN jscodeshift@0.9.0 requires a peer of @babel/preset-env@^7.1.6 but none is installed. You must install peer dependencies yourself.
+
++ @vue/cli@4.4.4
+added 1095 packages from 663 contributors in 720.41s
+
+(venv) C:\Users\Yakub\shopcenter\shopping>vue create .
+
+
+Vue CLI v4.4.4
+? Generate project in current directory? Yes
+
+
+Vue CLI v4.4.4
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, Router, Vuex, CSS Pre-processors, Linter
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with node-sass)
+? Pick a linter / formatter config: Prettier
+? Pick additional lint features: Lint on save
+? Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files
+? Save this as a preset for future projects? Yes
+? Save preset as: djv
+
+🎉  Preset djv saved in C:\Users\Yakub\.vuerc
+
+
+Vue CLI v4.4.4
+✨  Creating project in C:\Users\Yakub\shopcenter\shopping.
+🗃  Initializing git repository...
+⚙️  Installing CLI plugins. This might take a while...
+
+
+> yorkie@2.0.0 install C:\Users\Yakub\shopcenter\shopping\node_modules\yorkie
+> node bin/install.js
+
+setting up Git hooks
+done
+
+
+> core-js@3.6.5 postinstall C:\Users\Yakub\shopcenter\shopping\node_modules\core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+> ejs@2.7.4 postinstall C:\Users\Yakub\shopcenter\shopping\node_modules\ejs
+> node ./postinstall.js
+
+added 1217 packages from 846 contributors and audited 1220 packages in 334.683s
+found 0 vulnerabilities
+
+🚀  Invoking generators...
+📦  Installing additional dependencies...
+
+
+> node-sass@4.14.1 install C:\Users\Yakub\shopcenter\shopping\node_modules\node-sass
+> node scripts/install.js
+
+Downloading binary from https://github.com/sass/node-sass/releases/download/v4.14.1/win32-ia32-72_binding.node
+Download complete  ] - :
+Binary saved to C:\Users\Yakub\shopcenter\shopping\node_modules\node-sass\vendor\win32-ia32-72\binding.node
+Caching binary to C:\Users\Yakub\AppData\Roaming\npm-cache\node-sass\4.14.1\win32-ia32-72_binding.node
+
+> node-sass@4.14.1 postinstall C:\Users\Yakub\shopcenter\shopping\node_modules\node-sass
+> node scripts/build.js
+
+Binary found at C:\Users\Yakub\shopcenter\shopping\node_modules\node-sass\vendor\win32-ia32-72\binding.node
+Testing binary
+Binary is fine
+added 151 packages from 100 contributors and audited 1372 packages in 103.183s
+found 0 vulnerabilities
+
+⚓  Running completion hooks...
+
+📄  Generating README.md...
+
+🎉  Successfully created project shopping.
+👉  Get started with the following commands:
+
+ $ npm run serve
+
+
+(venv) C:\Users\Yakub\shopcenter\shopping>npm run build
+
+> shopping@0.1.0 build C:\Users\Yakub\shopcenter\shopping
+> vue-cli-service build
+
+
+-  Building for production...
+
+ DONE  Compiled successfully in 63428ms                                                                         19:29:08
+  File                                 Size               Gzipped
+
+  dist\js\chunk-vendors.34e5d1ae.js    127.78 KiB         44.13 KiB
+  dist\js\app.cfe671de.js              6.39 KiB           2.30 KiB
+  dist\js\about.a33020e3.js            0.44 KiB           0.31 KiB
+  dist\css\app.4aa4aa41.css            0.42 KiB           0.26 KiB
+
+  Images and other types of assets omitted.
+
+ DONE  Build complete. The dist directory is ready to be deployed.
+ INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+
+
+(venv) C:\Users\Yakub\shopcenter\shopping>pytho manage.py runserver
+'pytho' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\Yakub\shopcenter\shopping>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+June 18, 2020 - 19:30:39
+Django version 3.0.7, using settings 'shopping.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[18/Jun/2020 19:31:16] "GET / HTTP/1.1" 200 770
+Not Found: /js/chunk-vendors.34e5d1ae.js
+Not Found: /css/app.4aa4aa41.css
+[18/Jun/2020 19:31:18] "GET /js/chunk-vendors.34e5d1ae.js HTTP/1.1" 404 2185
+Not Found: /js/app.cfe671de.js
+[18/Jun/2020 19:31:18] "GET /css/app.4aa4aa41.css HTTP/1.1" 404 2161
+[18/Jun/2020 19:31:18] "GET /js/app.cfe671de.js HTTP/1.1" 404 2155
+Not Found: /js/about.a33020e3.js
+[18/Jun/2020 19:31:18] "GET /js/about.a33020e3.js HTTP/1.1" 404 2161
+[18/Jun/2020 19:31:25] "GET / HTTP/1.1" 200 770
+Not Found: /css/app.4aa4aa41.css
+Not Found: /js/chunk-vendors.34e5d1ae.js
+[18/Jun/2020 19:31:26] "GET /css/app.4aa4aa41.css HTTP/1.1" 404 2161
+Not Found: /js/app.cfe671de.js
+[18/Jun/2020 19:31:26] "GET /js/chunk-vendors.34e5d1ae.js HTTP/1.1" 404 2185
+[18/Jun/2020 19:31:26] "GET /js/app.cfe671de.js HTTP/1.1" 404 2155
+Not Found: /js/about.a33020e3.js
+[18/Jun/2020 19:31:26] "GET /js/about.a33020e3.js HTTP/1.1" 404 2161
+
+(venv) C:\Users\Yakub\shopcenter\shopping>npm run build
+
+> shopping@0.1.0 build C:\Users\Yakub\shopcenter\shopping
+> vue-cli-service build
+
+
+-  Building for production...
+
+ DONE  Compiled successfully in 44833ms                                                                         19:39:50
+  File                                      Size             Gzipped
+
+  dist\static\js\chunk-vendors.34e5d1ae.    127.78 KiB       44.13 KiB
+  js
+  dist\static\js\app.092d2b1c.js            6.40 KiB         2.30 KiB
+  dist\static\js\about.a33020e3.js          0.44 KiB         0.31 KiB
+  dist\static\css\app.4aa4aa41.css          0.42 KiB         0.26 KiB
+
+  Images and other types of assets omitted.
+
+ DONE  Build complete. The dist directory is ready to be deployed.
+ INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+
+
+(venv) C:\Users\Yakub\shopcenter\shopping>pytho manage.py runserver
+'pytho' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\Yakub\shopcenter\shopping>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+June 18, 2020 - 19:40:30
+Django version 3.0.7, using settings 'shopping.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[18/Jun/2020 19:40:52] "GET / HTTP/1.1" 200 819
+[18/Jun/2020 19:40:57] "GET /static/css/app.4aa4aa41.css HTTP/1.1" 200 428
+[18/Jun/2020 19:40:57] "GET /static/js/app.092d2b1c.js HTTP/1.1" 200 6554
+[18/Jun/2020 19:40:57] "GET /static/js/chunk-vendors.34e5d1ae.js HTTP/1.1" 200 130844
+[18/Jun/2020 19:40:57] "GET /static/js/about.a33020e3.js HTTP/1.1" 200 455
+[18/Jun/2020 19:41:00] "GET /static/img/logo.82b9c7a5.png HTTP/1.1" 200 6849
+[18/Jun/2020 19:41:01] "GET /static/js/chunk-vendors.34e5d1ae.js.map HTTP/1.1" 200 647807
+[18/Jun/2020 19:41:01] "GET /static/js/app.092d2b1c.js.map HTTP/1.1" 200 30660
